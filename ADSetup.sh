@@ -1,6 +1,6 @@
 #!/bin/bash
 echo -e "Azusas Debian Programming Setupscript"
-read -r "Press Enter to Start...." 
+read -r "Press Enter to Start...." datasdsda456
 echo "Continuing ...."
 apt update
 apt upgrade -y
@@ -9,7 +9,7 @@ echo -e "⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻"
 read -r -e -p "Should Snapcraft be installed? (y/n): " snapedcraft
 if [ "$snapedcraft" == y ];
     then
-      apt install snapd
+      apt install snapd -y
       snap install core
       echo -e "Snap installed..."
     else 
@@ -68,11 +68,11 @@ read -r -e -p "Should .NET (c#) be installed? (y/n): " dotnetin
             apt update 
             apt install -y dotnet-sdk-5.0
             apt install -y aspnetcore-runtime-5.0
-            apt install apt-transport-https dirmngr gnupg ca-certificates
+            apt install apt-transport-https dirmngr gnupg ca-certificates -y
             apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 3FA7E0328081BFF6A14DA29AA6A19B38D3D831EF
             echo "deb https://download.mono-project.com/repo/debian stable-buster main" | sudo tee /etc/apt/sources.list.d/mono-official-stable.list
             apt update
-            apt install mono-devel
+            apt install mono-devel -y
             clear 
             echo -e ""
             echo -e ""
